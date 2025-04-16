@@ -36,7 +36,7 @@ This project demonstrates how to set up a complete monitoring stack on a CentOS 
 
 ```bash
 sudo useradd --no-create-home --shell /bin/false node_exporter
----
+` ``` ` 
 
 ### ✅ 2. Install Node Exporter
 

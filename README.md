@@ -141,12 +141,15 @@ Change password when prompted
 3. Set URL to: http://localhost:9090
 4. Click Save & Test
 
+---
+
 ### 📈 Import Node Exporter Dashboard
 1. Go to Dashboard → New → Import
 2. Enter Dashboard ID: 1860
 3. Select Prometheus as data source
 4. Click Import
 
+---
 
 ## 📊 Screenshots
 
@@ -158,21 +161,6 @@ Change password when prompted
 ## 💡 Observability Outcome
 
 This stack enables real-time insights into VM performance and system health. It reflects an on-premises-like environment in a cloud context — replicating exactly what Platform Engineers and Infra teams deal with daily.
-
----
-
-## 🛡️ Designed For
-
-- Platform Engineering Interviews
-- Infrastructure Monitoring Showcases
-- GitHub Portfolio Projects
-
-
-
-
-
-
-
 
 
 

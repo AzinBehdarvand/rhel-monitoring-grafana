@@ -36,9 +36,10 @@ This project demonstrates how to set up a complete monitoring stack on a CentOS 
 
 ```bash
 sudo useradd --no-create-home --shell /bin/false node_exporter
+---
 
 ### ✅ 2. Install Node Exporter
-```bash
+
 curl -LO https://github.com/prometheus/node_exporter/releases/download/v1.8.0/node_exporter-1.8.0.linux-amd64.tar.gz
 tar xvf node_exporter-1.8.0.linux-amd64.tar.gz
 sudo cp node_exporter-1.8.0.linux-amd64/node_exporter /usr/local/bin/

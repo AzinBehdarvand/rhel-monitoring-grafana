@@ -32,13 +32,13 @@ This project demonstrates how to set up a complete monitoring stack on a CentOS 
 
 > Tested on CentOS 9 Stream (GCP VM)
 
-## ✅ 1. Create a user for Node Exporter
+### ✅ 1. Create a user for Node Exporter
 
 ```bash
 sudo useradd --no-create-home --shell /bin/false node_exporter
 ```
 
-## ✅ 2. Install Node Exporter
+### ✅ 2. Install Node Exporter
 ```bash
 curl -LO https://github.com/prometheus/node_exporter/releases/download/v1.8.0/node_exporter-1.8.0.linux-amd64.tar.gz
 tar xvf node_exporter-1.8.0.linux-amd64.tar.gz
@@ -46,7 +46,7 @@ sudo cp node_exporter-1.8.0.linux-amd64/node_exporter /usr/local/bin/
 sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
 ```
 
-## ✅ 3. Create a systemd service for Node Exporter
+### ✅ 3. Create a systemd service for Node Exporter
 ```bash
 sudo tee /etc/systemd/system/node_exporter.service > /dev/null <<EOF
 [Unit]
@@ -69,7 +69,7 @@ sudo systemctl daemon-reload
 sudo systemctl start node_exporter
 sudo systemctl enable node_exporter
 ```
-## ✅ 4. Install Prometheus
+### ✅ 4. Install Prometheus
 ```bash
 sudo useradd --no-create-home --shell /bin/false prometheus
 curl -LO https://github.com/prometheus/prometheus/releases/download/v2.52.0/prometheus-2.52.0.linux-amd64.tar.gz
@@ -95,7 +95,7 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:9100']
 ```
-## ✅ 6. Create a systemd service for Prometheus
+### ✅ 6. Create a systemd service for Prometheus
 ```bash
 sudo tee /etc/systemd/system/prometheus.service > /dev/null <<EOF
 [Unit]
@@ -123,13 +123,13 @@ sudo systemctl daemon-reload
 sudo systemctl start prometheus
 sudo systemctl enable prometheus
 ```
-## ✅ 7. Install Grafana
+### ✅ 7. Install Grafana
 ```bash
 sudo dnf install -y https://dl.grafana.com/oss/release/grafana-10.3.1-1.x86_64.rpm
 sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 ```
-## ✅ 8. Access and Configure Grafana
+### ✅ 8. Access and Configure Grafana
 
 Open in browser: http://[VM-IP]:3000
 Login: admin / admin
@@ -143,7 +143,7 @@ Change password when prompted
 
 ---
 
-### 📈 Import Node Exporter Dashboard
+## 📈 Import Node Exporter Dashboard
 1. Go to Dashboard → New → Import
 2. Enter Dashboard ID: 1860
 3. Select Prometheus as data source
